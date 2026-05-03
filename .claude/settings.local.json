@@ -1,0 +1,19 @@
+{
+  "permissions": {
+    "allow": [
+      "PowerShell(Get-ChildItem \"C:\\\\projects\\\\partypage\\\\images\" -Recurse | ForEach-Object { $_.FullName })",
+      "PowerShell(Move-Item *)",
+      "Bash(npm run *)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:5173)",
+      "Bash(npm install *)",
+      "WebSearch",
+      "WebFetch(domain:www.yr.no)",
+      "WebFetch(domain:developer.yr.no)",
+      "Bash(gh auth *)",
+      "PowerShell(Get-ChildItem \"C:\\\\projects\\\\partypage\\\\public\\\\images\" | Measure-Object -Property Length -Sum | Select-Object @{N='TotalMB';E={[math]::Round\\($_.Sum/1MB,1\\)}})",
+      "PowerShell($size = \\(Get-ChildItem \"C:\\\\projects\\\\partypage\\\\public\\\\images\" -Recurse | Measure-Object -Property Length -Sum\\).Sum; Write-Output \"Total: $\\([math]::Round\\($size/1MB,1\\)\\) MB\")",
+      "PowerShell(Get-ChildItem \"C:\\\\projects\\\\partypage\\\\public\\\\images\" -Recurse | Sort-Object Length -Descending | Select-Object Name, @{N='MB';E={[math]::Round\\($_.Length/1MB,1\\)}} | Select-Object -First 10)",
+      "PowerShell(Get-ChildItem \"C:\\\\projects\\\\partypage\\\\public\\\\images\" | Sort-Object Length -Descending | ForEach-Object { \"$\\([math]::Round\\($_.Length/1MB,1\\)\\) MB  $\\($_.Name\\)\" } | Select-Object -First 10)"
+    ]
+  }
+}

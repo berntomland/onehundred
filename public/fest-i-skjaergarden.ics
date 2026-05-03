@@ -1,0 +1,14 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Fest i skjærgården//NO
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20260626
+DTEND;VALUE=DATE:20260629
+SUMMARY:Fest i skjærgården
+DESCRIPTION:Helgefest i Farsund med 50+ venner. Ankomst fredag\, hjemreise søndag. Se program på festsiden.
+LOCATION:Bekkevik 85\, 4550 Farsund
+STATUS:CONFIRMED
+END:VEVENT
+END:VCALENDAR

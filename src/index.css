@@ -1,0 +1,41 @@
+:root {
+  --party-primary: #e63946;
+  --party-secondary: #457b9d;
+  --party-dark: #1d3557;
+  --party-light: #f1faee;
+  --party-accent: #a8dadc;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background-color: var(--party-light);
+  color: var(--party-dark);
+  overflow-x: hidden;
+}
+
+#root {
+  width: 100%;
+}
+
+section {
+  padding: 4rem 0;
+}
+
+.section-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--party-dark);
+  margin-bottom: 0.5rem;
+}
+
+.section-divider {
+  width: 60px;
+  height: 4px;
+  background-color: var(--party-primary);
+  margin: 0 auto 2rem auto;
+  border-radius: 2px;
+}
