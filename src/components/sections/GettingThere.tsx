@@ -1,21 +1,22 @@
 import { Container, Row, Col, Alert, Button } from 'react-bootstrap'
 import MapFlyby from '../MapFlyby'
+import { GETTING_THERE } from '../../content'
 
 export default function GettingThere() {
   return (
-    <section id="getting-there" style={{ backgroundColor: '#fff' }}>
+    <section id="getting-there">
       <Container>
         <div className="text-center mb-5">
-          <h2 className="section-title">Slik finner du frem</h2>
+          <h2 className="section-title">{GETTING_THERE.title}</h2>
           <div className="section-divider" />
-          <p className="text-muted">Hytten ligger i Farsund — ikke akkurat naboer, men absolutt verdt turen.</p>
+          <p className="text-muted">{GETTING_THERE.subtitle}</p>
         </div>
         <Row className="g-4 align-items-start">
           <Col md={5}>
             <Alert variant="info">
-              <Alert.Heading>📍 Adresse</Alert.Heading>
-              <p className="mb-1"><strong>Bekkevik 85, 4550 Farsund</strong></p>
-              <p className="mb-2 small text-muted">Koordinater: 58.0922° N, 6.8338° Ø</p>
+              <Alert.Heading>{GETTING_THERE.addressHeading}</Alert.Heading>
+              <p className="mb-1"><strong>{GETTING_THERE.addressLine}</strong></p>
+              <p className="mb-2 small text-muted">Koordinater: {GETTING_THERE.coordinates}</p>
               <Button
                 variant="outline-primary"
                 size="sm"
@@ -23,24 +24,24 @@ export default function GettingThere() {
                 target="_blank"
                 rel="noreferrer"
               >
-                Veibeskrivelse fra Bergen →
+                {GETTING_THERE.directionsBtn}
               </Button>
             </Alert>
 
-            <h5 className="fw-bold mt-4 mb-3" style={{ color: 'var(--party-dark)' }}>Med bil</h5>
+            <h5 className="fw-bold mt-4 mb-3">{GETTING_THERE.byCarTitle}</h5>
             <p className="text-muted">
-              Fra Bergen: E39 sørover mot Stavanger, ta av ved Lyngdal og følg skilting mot Farsund. Regn med ca. 3–3,5 timer — perfekt tid til å lage den ultimate helgespillisten.
+              {GETTING_THERE.byCar}
             </p>
 
-            <h5 className="fw-bold mt-4 mb-3" style={{ color: 'var(--party-dark)' }}>Uten bil</h5>
+            <h5 className="fw-bold mt-4 mb-3">{GETTING_THERE.noCarTitle}</h5>
             <p className="text-muted">
-              Vi oppfordrer sterkt til samkjøring — ta en titt i gruppa og finn noen å kjøre med. Det er mer gøy, billigere, og miljøet takker deg.
+              {GETTING_THERE.noCar}
             </p>
           </Col>
           <Col md={7}>
             <MapFlyby />
             <p className="text-muted small mt-2 text-center">
-              Kartet flyr fra Bergen til hytten — omtrent like smooth som turen blir. Klikk på markøren for Google Maps.
+              {GETTING_THERE.mapCaption}
             </p>
           </Col>
         </Row>

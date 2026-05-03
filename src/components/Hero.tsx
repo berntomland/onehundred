@@ -1,7 +1,9 @@
 import { useState, useRef, useEffect } from 'react'
-import { Container } from 'react-bootstrap'
+import { Container, Row, Col } from 'react-bootstrap'
+import { HERO, EVENT_DATE_DISPLAY, EVENT_LOCATION, EVENT_GUESTS } from '../content'
+import WeatherWidget from './WeatherWidget'
 
-const BANNER_IMAGE = '/images/2026-05-01 17.31.10.jpg'
+const BANNER_IMAGE = '/images/hovedlogo.jpg'
 
 const GOOGLE_CAL_URL =
   'https://calendar.google.com/calendar/render?action=TEMPLATE' +
@@ -36,11 +38,11 @@ function DateButton() {
           color: 'inherit',
           textAlign: 'center',
         }}
-        title="Legg til i kalender"
+        title={HERO.calendarDropdownTitle}
       >
-        <div className="fw-bold fs-5">📅 Dato</div>
+        <div className="fw-bold fs-5">{HERO.dateLabel}</div>
         <div style={{ color: 'rgba(255,255,255,0.75)', textDecoration: 'underline dotted' }}>
-          26.–28. juni 2026
+          {EVENT_DATE_DISPLAY}
         </div>
       </button>
 
@@ -63,7 +65,7 @@ function DateButton() {
             className="text-muted small mb-2 px-2 pt-1"
             style={{ color: '#666', fontWeight: 600 }}
           >
-            Legg til i kalender
+            {HERO.calendarDropdownTitle}
           </p>
           <a
             href={GOOGLE_CAL_URL}
@@ -73,7 +75,7 @@ function DateButton() {
             style={menuItemStyle}
           >
             <img src="https://www.google.com/favicon.ico" width={16} height={16} alt="" style={{ borderRadius: 3 }} />
-            Google Kalender
+            {HERO.calendarGoogle}
           </a>
           <a
             href="/fest-i-skjaergarden.ics"
@@ -82,7 +84,7 @@ function DateButton() {
             style={menuItemStyle}
           >
             <span style={{ fontSize: '1rem' }}>📆</span>
-            Apple / Outlook (.ics)
+            {HERO.calendarIcs}
           </a>
         </div>
       )}
@@ -108,7 +110,7 @@ export default function Hero() {
     <div
       style={{
         position: 'relative',
-        minHeight: '92vh',
+        minHeight: 'auto',
         display: 'flex',
         alignItems: 'center',
         overflow: 'hidden',
@@ -125,43 +127,42 @@ export default function Hero() {
         }}
       />
 
-      <Container className="text-center text-white py-5" style={{ position: 'relative', zIndex: 1 }}>
-        <p
-          className="text-uppercase fw-semibold mb-3"
-          style={{ color: 'var(--party-accent)', letterSpacing: 4, fontSize: '0.85rem' }}
-        >
-          Det skjer, folkens!
-        </p>
-        <h1
-          className="display-2 fw-bold mb-3"
-          style={{ textShadow: '0 2px 24px rgba(0,0,0,0.6)' }}
-        >
-          Fest i skjærgården
-        </h1>
-        <p
-          className="lead mb-4 mx-auto"
-          style={{ color: 'rgba(255,255,255,0.82)', maxWidth: 600 }}
-        >
-          En hel helg på hytta i Farsund — 50+ av de beste menneskene vi kjenner, alt for mye god mat, musikk som ikke stopper og minner vi kommer til å snakke om i årevis.
-        </p>
-
-        <div
-          className="d-inline-flex flex-wrap gap-4 px-4 py-3 rounded-3 mb-5"
-          style={{ background: 'rgba(0,0,0,0.35)', backdropFilter: 'blur(10px)' }}
-        >
-          <DateButton />
-          <div className="d-none d-sm-block" style={{ borderLeft: '1px solid rgba(255,255,255,0.2)' }} />
-          <div>
-            <div className="fw-bold fs-5">📍 Sted</div>
-            <div style={{ color: 'rgba(255,255,255,0.75)' }}>Farsund</div>
-          </div>
-          <div className="d-none d-sm-block" style={{ borderLeft: '1px solid rgba(255,255,255,0.2)' }} />
-          <div>
-            <div className="fw-bold fs-5">👥 Gjester</div>
-            <div style={{ color: 'rgba(255,255,255,0.75)' }}>50+ personer</div>
-          </div>
-        </div>
-
+      <Container className="text-white py-5" style={{ position: 'relative', zIndex: 1 }}>
+        <Row className="align-items-center gy-4">
+          <Col xs={12} md={7} className="text-center text-md-start">
+            <h1
+              className="display-2 fw-bold mb-3"
+              style={{ textShadow: '0 2px 24px rgba(0,0,0,0.6)' }}
+            >
+              {HERO.title}
+            </h1>
+            <p
+              className="lead mb-4"
+              style={{ color: 'rgba(255,255,255,0.82)' }}
+            >
+              {HERO.lead}
+            </p>
+            <div
+              className="d-inline-flex flex-wrap gap-4 px-4 py-3 rounded-3"
+              style={{ background: 'rgba(0,0,0,0.35)', backdropFilter: 'blur(10px)' }}
+            >
+              <DateButton />
+              <div className="d-none d-sm-block" style={{ borderLeft: '1px solid rgba(255,255,255,0.2)' }} />
+              <div>
+                <div className="fw-bold fs-5">{HERO.placeLabel}</div>
+                <div style={{ color: 'rgba(255,255,255,0.75)' }}>{EVENT_LOCATION}</div>
+              </div>
+              <div className="d-none d-sm-block" style={{ borderLeft: '1px solid rgba(255,255,255,0.2)' }} />
+              <div>
+                <div className="fw-bold fs-5">{HERO.guestLabel}</div>
+                <div style={{ color: 'rgba(255,255,255,0.75)' }}>{EVENT_GUESTS}</div>
+              </div>
+            </div>
+          </Col>
+          <Col xs={12} md={5} className="d-flex justify-content-center justify-content-md-end">
+            <WeatherWidget />
+          </Col>
+        </Row>
       </Container>
     </div>
   )

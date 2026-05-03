@@ -12,9 +12,7 @@ html {
 
 body {
   margin: 0;
-  background-color: var(--party-light);
-  color: var(--party-dark);
-  overflow-x: hidden;
+  overflow-x: clip;
 }
 
 #root {
@@ -28,7 +26,7 @@ section {
 .section-title {
   font-size: 2rem;
   font-weight: 700;
-  color: var(--party-dark);
+  color: var(--bs-body-color);
   margin-bottom: 0.5rem;
 }
 

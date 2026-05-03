@@ -1,19 +1,20 @@
 import { Container } from 'react-bootstrap'
+import { WEATHER } from '../../content'
 
 const YR_ID = '1-649'
 const YR_LINK = 'https://www.yr.no/nb/v%C3%A6rvarsel/daglig-tabell/1-649/Norge/Agder/Farsund/Farsund'
 
 export default function Weather() {
   return (
-    <section id="vaer" style={{ backgroundColor: 'var(--party-light)' }}>
+    <section id="vaer">
       <Container>
         <div className="text-center mb-5">
-          <h2 className="section-title">Været i Farsund</h2>
+          <h2 className="section-title">{WEATHER.title}</h2>
           <div className="section-divider" />
           <p className="text-muted">
-            Hva sier værgudene? Her er oppdatert varsel fra Yr — direkte fra{' '}
-            <a href={YR_LINK} target="_blank" rel="noreferrer" style={{ color: 'var(--party-secondary)' }}>
-              yr.no
+            {WEATHER.subtitle}{' '}
+            <a href={YR_LINK} target="_blank" rel="noreferrer">
+              {WEATHER.yrLinkText}
             </a>
             .
           </p>
@@ -30,20 +31,19 @@ export default function Weather() {
               href={YR_LINK}
               target="_blank"
               rel="noreferrer"
-              className="btn btn-lg fw-semibold px-5"
-              style={{ background: 'var(--party-secondary)', color: '#fff', border: 'none' }}
+              className="btn btn-primary btn-lg fw-semibold px-5"
             >
-              Se full 10-dagers varsel på Yr.no →
+              {WEATHER.fullForecastBtn}
             </a>
           </div>
         </div>
 
         <p className="text-center small text-muted mt-3">
-          Værdata levert av{' '}
-          <a href="https://www.yr.no" target="_blank" rel="noreferrer" style={{ color: 'var(--party-secondary)' }}>
-            Yr.no
+          {WEATHER.credit}{' '}
+          <a href="https://www.yr.no" target="_blank" rel="noreferrer">
+            {WEATHER.creditLink}
           </a>
-          {' '}/ Meteorologisk institutt
+          {' '}{WEATHER.creditSuffix}
         </p>
       </Container>
     </section>
