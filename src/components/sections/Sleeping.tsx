@@ -106,8 +106,18 @@ export default function Sleeping() {
           <p className="text-muted">Vi har plass til alle — fordelt på fem lokasjoner.</p>
         </div>
 
+        <Alert variant="warning" className="mb-5">
+          <Alert.Heading className="fs-6 fw-bold">📋 Husk å ta med</Alert.Heading>
+          <ul className="mb-0">
+            <li>Laken + sovepose <strong>eller</strong> dyne — vi har noen dyner, men langt fra nok til alle</li>
+            <li>Vi er avhengige av at noen tar med <strong>luftmadrasser</strong> — mer info om dette kommer</li>
+            <li>Romfordeling deles ut nærmere arrangementet</li>
+            <li>De fleste må rekne med å dele rom — det er en del av moroa 🙂</li>
+          </ul>
+        </Alert>
+
         {/* Search */}
-        <div className="mx-auto mb-5" style={{ maxWidth: 460 }}>
+        <div className="mx-auto mb-4" style={{ maxWidth: 460 }}>
           <p className="fw-semibold text-center mb-2" style={{ color: 'var(--party-dark)' }}>
             Finn din soveplass
           </p>
@@ -138,18 +148,8 @@ export default function Sleeping() {
           )}
         </div>
 
-        <Alert variant="warning" className="mb-5">
-          <Alert.Heading className="fs-6 fw-bold">📋 Husk å ta med</Alert.Heading>
-          <ul className="mb-0">
-            <li>Laken + sovepose <strong>eller</strong> dyne — vi har noen dyner, men langt fra nok til alle</li>
-            <li>Vi er avhengige av at noen tar med <strong>luftmadrasser</strong> — mer info om dette kommer</li>
-            <li>Romfordeling deles ut nærmere arrangementet</li>
-            <li>De fleste må rekne med å dele rom — det er en del av moroa 🙂</li>
-          </ul>
-        </Alert>
-
         <Row className="g-4">
-          {locations.map(({ icon, name, capacity, mapUrl, spots, note, guests }, idx) => {
+          {locations.map(({ icon, name, capacity, mapUrl, spots, note }, idx) => {
             const isMatch = idx === matchIndex
             return (
               <Col key={name} xs={12} md={6} lg={4}>
@@ -175,32 +175,6 @@ export default function Sleeping() {
                         ))}
                       </ul>
                       {note && <p className="small text-muted mt-3 mb-0 fst-italic">{note}</p>}
-
-                      {/* Guest list */}
-                      <div className="mt-3 pt-3" style={{ borderTop: '1px solid #dee2e6' }}>
-                        <p className="small fw-semibold mb-2" style={{ color: 'var(--party-dark)' }}>
-                          Sover her:
-                        </p>
-                        <div className="d-flex flex-wrap gap-1">
-                          {guests.map(guest => {
-                            const isThisPerson = q.length >= 2 && normalize(guest).includes(q)
-                            return (
-                              <span
-                                key={guest}
-                                className="small px-2 py-1 rounded-pill"
-                                style={{
-                                  background: isThisPerson ? '#198754' : 'var(--party-light)',
-                                  color: isThisPerson ? '#fff' : 'var(--party-dark)',
-                                  fontWeight: isThisPerson ? 700 : 400,
-                                  transition: 'all 0.2s',
-                                }}
-                              >
-                                {guest}
-                              </span>
-                            )
-                          })}
-                        </div>
-                      </div>
 
                       {mapUrl && (
                         <a
