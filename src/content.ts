@@ -11,6 +11,7 @@ export const EVENT_ADDRESS = 'Bekkevik 85, 4550 Farsund'
 
 // --- NavBar ---
 export const NAV_SECTIONS = [
+  { id: 'om-helgen',     label: 'Om helgen'      },
   { id: 'getting-there', label: 'Veibeskrivelse' },
   { id: 'parking',       label: 'Parkering'      },
   { id: 'sleeping',      label: 'Overnatting'    },
@@ -29,6 +30,14 @@ export const HERO = {
   calendarDropdownTitle: 'Legg til i kalender',
   calendarGoogle:        'Google Kalender',
   calendarIcs:           'Apple / Outlook (.ics)',
+}
+
+// --- Om helgen ---
+export const ABOUT = {
+  title: 'Om helgen',
+  body:  'Vi gleder oss til å feire med dere alle sammen! Vi ønsker at feiringen skal være uformell med lavt tempo. Vi håper på fint vær og at vi er ute mesteparten av tiden. Bade kan man gjøre når man vil, hageleker er fritt frem eller bare slenge seg på en solseng med et glass vin 🙂',
+  planLabel: 'Programmet for helgen blir styrt av Bernts 3 søstre:',
+  planners:  'Hildegunn, Lilly Ann og Linda',
 }
 
 // --- Velkommen ---
@@ -200,24 +209,24 @@ export const PROGRAM = {
       day: 'Lørdag 27. juni',
       events: [
         {
-          time:  'Morgenen',
-          label: '🍳 Frokost på hytten',
-          note:  'For de som sover på hytta. De som overnatter i byen møter vi opp og henter — ingen blir glemt.',
+          time:  '09:00',
+          label: '🍳 Frokost p[ hytta',
+          note:  'Jobber litt med logistikken, men vi finner en måte å transportere de som sover i byen',
         },
         {
-          time:  'Ca. 10:00',
-          label: '⚓ Båttur — alle mann om bord!',
+          time:  'Ca. 11:00',
+          label: '⚓ Båttur',
           note:  'Vi drar ut på sjøen i ca. 4 timer. Det blir enkel servering og drikke underveis, og det blir mulighet for å bade. Ta med badetøy og håndkle — vanntemperaturen er et sted mellom 10 og 20 grader, og det er opp til deg hva du synes om det.',
         },
         {
-          time:  'Ettermiddagen',
-          label: 'Tilbake på hytten — pust ut',
+          time:  'Ca: 16:00',
+          label: 'Tilbake på hytta',
           note:  'Etter båtturen er det bare å slappe av, tørke seg, og lade opp til kvelden.',
         },
         {
           time:  'Kvelden',
           label: '🍽️ Middag, underholdning og god stemning',
-          note:  'Ordentlig middag, og så holder vi på så lenge vi gidder. Utpå natten dukker det opp litt nattmat.',
+          note:  'Det blir skalldyr og litt tapas. Utpå natten dukker det opp litt nattmat.',
         },
       ],
     },

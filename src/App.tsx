@@ -1,5 +1,6 @@
 import NavBar from './components/NavBar'
 import Hero from './components/Hero'
+import About from './components/sections/About'
 import GettingThere from './components/sections/GettingThere'
 import Parking from './components/sections/Parking'
 import Sleeping from './components/sections/Sleeping'
@@ -12,6 +13,7 @@ export default function App() {
     <>
       <NavBar />
       <Hero />
+      <About />
       <GettingThere />
       <Parking />
       <Sleeping />
