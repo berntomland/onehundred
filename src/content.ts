@@ -42,7 +42,7 @@ export const ABOUT = {
       'Vi har laget et program for helgen, men vi legger opp til lavt tempo med muligheter for soling, bading, fisking, noe leskende i skyggen og god prat. ' +
       'Vi satser selvsagt på strålende sol siden mesteparten av festen vil skje ute, men vi har en plan B dersom værgudene slår seg vrange\n' +
       '\n' +
-      'Vi står for mat (noe krever litt egeninnsats). Vi står for drikke til maten, men ta gjerne med deg det du har lyst til å drikke utover dette. \n' +
+      'Vi står for mat (noe krever litt egeninnsats) og drikke til maten, men ta gjerne med deg det du har lyst til å drikke utover dette. \n' +
       '\n' +
       'Vi har bare ett gaveønske og det er at det blir en bra fest 🙂',
   planLabel: 'Lilly Ann (93281027) i samarbeid med Hildegunn og Linda styrer programmet',
@@ -191,7 +191,7 @@ export const PACK = {
     'Badetøy og håndkle',
     'Solkrem og solbriller',
     'Varme klær til kveldene',
-    'Regntøy (kanskje, sjekk værmeldingen her på siden)',
+    'Muligens regntøy (sjekk værmeldingen her på siden)',
     'Egne drikkevarer utover det vi tilbyr',
   ],
 }
@@ -241,7 +241,7 @@ export const PROGRAM = {
         {
           time:  'Kvelden',
           label: '🍽️ Middag, underholdning og fest',
-          note:  'Sørlandsmeny med ræger og krabber. Litt tapas blir det også. Nattmat serveres når det mørkner.',
+          note:  'Sørlandsmeny med ræg og krabber. Litt tapas blir det også. Nattmat serveres når det mørkner.',
         },
       ],
     },
@@ -261,7 +261,7 @@ export const PROGRAM = {
         {
           time:  'Hele dagen',
           label: '',
-          note:  'Dra når du vil, bli så lenge du vil. Ingen fasit på søndagen. Gjør akkurat som du selv ønsker.',
+          note:  'Gjør akkurat som du selv ønsker. Dra når du vil, bli så lenge du vil. Ingen fasit på søndagen. ',
         },
       ],
     },
