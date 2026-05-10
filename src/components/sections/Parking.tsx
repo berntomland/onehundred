@@ -12,21 +12,13 @@ export default function Parking() {
         </div>
 
         <Row className="g-4 mb-4">
-          {PARKING.options.map(({ icon, name, tag, tagColor, details, note, mapUrl }) => (
+          {PARKING.options.map(({ icon, name, details, note, mapUrl }) => (
             <Col key={name} xs={12} md={6}>
               <Card className="h-100 border-0 shadow-sm">
                 <Card.Body className="p-4">
-                  <div className="d-flex align-items-center justify-content-between mb-1">
-                    <div className="d-flex align-items-center gap-2">
-                      <span style={{ fontSize: '1.6rem' }}>{icon}</span>
-                      <Card.Title className="fw-bold mb-0">{name}</Card.Title>
-                    </div>
-                    <span
-                      className="small fw-semibold px-2 py-1 rounded-pill"
-                      style={{ background: tagColor, color: '#fff', fontSize: '0.75rem' }}
-                    >
-                      {tag}
-                    </span>
+                  <div className="d-flex align-items-center gap-2 mb-1">
+                    <span style={{ fontSize: '1.6rem' }}>{icon}</span>
+                    <Card.Title className="fw-bold mb-0">{name}</Card.Title>
                   </div>
                   <ul className="list-unstyled mt-3 mb-0">
                     {details.map(({ label, value }) => (

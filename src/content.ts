@@ -15,8 +15,10 @@ export const NAV_SECTIONS = [
   { id: 'getting-there', label: 'Veibeskrivelse' },
   { id: 'parking',       label: 'Parkering'      },
   { id: 'sleeping',      label: 'Overnatting'    },
+  { id: 'pack',          label: 'Husk å ta med'  },
   { id: 'program',       label: 'Program'        },
   { id: 'vaer',          label: 'Vær'            },
+  { id: 'discord',       label: 'Discord'        },
 ]
 
 // --- Hero ---
@@ -35,9 +37,16 @@ export const HERO = {
 // --- Om helgen ---
 export const ABOUT = {
   title: 'Om helgen',
-  body:  'Vi gleder oss til å feire med dere alle sammen! Vi ønsker at feiringen skal være uformell med lavt tempo. Vi håper på fint vær og at vi er ute mesteparten av tiden. Bade kan man gjøre når man vil, hageleker er fritt frem eller bare slenge seg på en solseng med et glass vin 🙂',
-  planLabel: 'Programmet for helgen blir styrt av Bernts 3 søstre:',
-  planners:  'Hildegunn, Lilly Ann og Linda',
+  body:  'Vi gleder oss veldig til å feire med dere alle sammen! \n' +
+      '\n' +
+      'Det er laget et lite program for helgen, men vi legger opp til et lavt tempo med muligheter til å sole seg, bade, drikke vin i skyggen og prate. Kanskje drar noen i gang noen hageleker?\n' +
+      'Eller satser vi alt på at får sånn noenlunde vær. Mesteparten av festen vil skje ute. Ta med gode klær!\n' +
+      '\n' +
+      'Frokost, middag og kvelds ordnes av oss. Litt drikke til maten ordner vi også, men ta gjerne med deg det du har lyst til å drikke utover dette. \n' +
+      '\n' +
+      'Presangen er at dere kommer  🙂',
+  planLabel: 'Det lille programmet vi har vil bli håndtert av Bernts 3 søstre:',
+  planners:  'Lilly Ann (93281027), Hildegunn (99558833) og Linda (41929313)',
 }
 
 // --- Velkommen ---
@@ -49,45 +58,41 @@ export const WELCOME = {
 // --- Veibeskrivelse ---
 export const GETTING_THERE = {
   title:    'Slik finner du frem',
-  subtitle: 'Hytten ligger i Bekkevik i Spind i Farsund kommune.',
+  subtitle: 'Hytta ligger i Bekkevik i Spind i Farsund kommune',
   addressHeading: '📍 Adresse',
   addressLine:    EVENT_ADDRESS,
   coordinates:    '58.0922° N, 6.8338° Ø',
   directionsBtn:  'Veibeskrivelse fra Bergen →',
   byCarTitle:     'Med bil',
-  byCar:          'Turen tar 6.5 til 7 timer. Litt avhengig av trafikk og om du treffer på ferja. Google maps er din venn',
+  byCar:          'Fra Bergen tar turen 6.5 til 7 timer. Litt avhengig av trafikk og om du treffer på ferja. Google maps er din venn',
   noCarTitle:     'Uten bil',
-  noCar:          'Samkjøring er bra. Bruk gjerne facebooksiden til å alliere deg med noen',
+  noCar:          'Bruk gjerne facebooksiden til å koordinere alternativ transport',
   mapCaption:     'Klikk på markøren for Google Maps',
 }
 
 // --- Parkering ---
 export const PARKING = {
   title:    'Parkering',
-  subtitle: 'Det er lite parkering i nærheten av ved hytten — biler parkeres i Farsund by, og man tar seg frem til hytten derfra.',
-  tipTitle: '🚗 Tips: slipp av folk og bagasje først',
-  tip1:     'Det er mulig å kjøre neste frem til hytten, slippe av folk og bagasje, og deretter kjøre tilbake til Farsund for å parkere. Det er bare 5 minutters gange fra parkeringsplassen til hytten.',
-  tip2:     'Transport mellom Farsund og hytten blir mest sannsynlig med båt — mer info om dette kommer.',
+  subtitle: 'Det er lite parkering i nærheten av ved hytta — biler parkeres i Farsund by, og man tar seg frem til hytta derfra.',
+  tipTitle: '🚗 Tips:',
+  tip1:     'Det er mulig å kjøre nesten frem til hytta, slippe av folk og bagasje, og deretter kjøre tilbake til Farsund for å parkere. Det er bare 5 minutters gange fra parkeringsplassen til hytta',
+  tip2:     'Transport mellom Farsund og hytta blir mest sannsynlig med båt — mer info om dette kommer',
   mapsLabel: '📍 Vis i Google Maps →',
   options: [
     {
       icon: '🏬',
       name: 'Senteret i Farsund',
-      tag: 'Anbefalt',
-      tagColor: 'var(--party-primary)',
       details: [
         { label: 'Kapasitet',  value: 'Stor parkeringsplass' },
         { label: 'Varighet',   value: 'Hele helgen' },
         { label: 'Elbillader', value: 'Ja ⚡' },
       ],
-      note:   'Beste alternativet for de fleste. Stort parkeringsanlegg ved kjøpesenteret — ingen problemer med å stå her hele helgen.',
+      note:   'Beste alternativet for de fleste. Stort parkeringsanlegg ved kjøpesenteret. Man kan parkere gratis på de hvite feltene. De gule tilhører senteret',
       mapUrl: 'https://maps.app.goo.gl/x75zczvKHeH8ZUPK7',
     },
     {
       icon: '🏘️',
-      name: 'Eneboligen i Farsund',
-      tag: 'Begrenset',
-      tagColor: 'var(--party-secondary)',
+      name: 'Enebolig i Farsund',
       details: [
         { label: 'Kapasitet',  value: '8–10 biler' },
         { label: 'Varighet',   value: 'Hele helgen' },
@@ -101,20 +106,13 @@ export const PARKING = {
 
 // --- Overnatting ---
 export const SLEEPING = {
-  title:    'Hvor sover man?',
+  title:    'Overnatting',
   subtitle: 'Vi har plass til alle — fordelt på fem lokasjoner.',
-  packTitle: '📋 Husk å ta med',
-  packItems: [
-    'Laken + sovepose <strong>eller</strong> dyne — vi har noen dyner, men langt fra nok til alle',
-    'Vi er avhengige av at noen tar med <strong>luftmadrasser</strong> — mer info om dette kommer',
-    'Romfordeling deles ut nærmere arrangementet',
-    'De fleste må regne med å dele rom med noen. Vi skal gjøre vårt beste for at du deler med noen du kjenner 🙂',
-  ],
   searchTitle:       'Finn din soveplass',
   searchPlaceholder: 'Skriv inn navnet ditt...',
   searchHit:         (name: string, location: string, icon: string) =>
                        `${name} sover i ${location} ${icon}`,
-  searchMiss:        'Fant ingen med det navnet — har du stavet riktig?',
+  searchMiss:        'Fant ikke noen med dette navnet, har du glemt å melde deg?',
   mapsLabel:         '📍 Vis i Google Maps →',
   locations: [
     {
@@ -132,7 +130,7 @@ export const SLEEPING = {
     },
     {
       icon: '🏡',
-      name: 'Hovedhytten',
+      name: 'Hovedhytta',
       capacity: '8 personer',
       mapUrl: 'https://maps.app.goo.gl/6mhuKGEjVa8MiRm7A',
       spots: [
@@ -143,7 +141,7 @@ export const SLEEPING = {
     },
     {
       icon: '🛖',
-      name: 'Hytte 2',
+      name: 'Lånehytte',
       capacity: 'ca. 10 personer',
       mapUrl: 'https://maps.app.goo.gl/YmSBqqNAxovP7WsXA',
       spots: [
@@ -176,8 +174,25 @@ export const SLEEPING = {
         { label: 'Anneks ved sjøen', count: '3 av plassene ligger her' },
       ],
       note: 'Ligger i Farsund by. De som sover her blir plukket opp til båtturen lørdag morgen.',
-      guests: ['Hildegunn', 'Lilly Ann', 'Linda', 'Tom-Ivar', 'Stig', 'Tor Erik', 'Christine', 'Lennart', 'Synnøve', 'Toli', 'Ronny', 'Thomas', 'Øystein', 'Kjersti', 'Louise'],
+      guests: ['Hildegunn', 'Lilly Ann', 'Linda', 'Tom-Ivar', 'Stig', 'Tor Erik', 'Christine', 'Lennart', 'Synnøve', 'Toli', 'Ronny', 'Thomas', 'Øystein', 'Kjersti', 'Lovise'],
     },
+  ],
+}
+
+// --- Husk å ta med ---
+export const PACK = {
+  title: 'Husk å ta med',
+  mustHaveTitle: '✅ Må ha med',
+  mustHaveItems: [
+    'Laken + sovepose <strong>eller</strong> dyne — vi har noen dyner, men langt fra nok til alle',
+    'Vi er avhengige av at noen tar med <strong>luftmadrasser</strong> — mer info om dette kommer',
+  ],
+  niceToHaveTitle: '👍 Greit å ta med',
+  niceToHaveItems: [
+    'Badetøy og håndkle',
+    'Solkrem',
+    'Regntøy og varme klær til kveldene',
+    'Egne drikkevarer utover det vi tilbyr',
   ],
 }
 
@@ -191,17 +206,17 @@ export const PROGRAM = {
         {
           time:  'Ettermiddag',
           label: 'Ankomst',
-          note:  'Kom når du kan. Hytten er klar fra ettermiddagen. Gi en lyd når du vet omtrent når du kommer så finner vi ut av logistikken',
+          note:  'Kom når du kan. hytta er klar fra ettermiddagen. Gi en lyd når du vet omtrent når du kommer så finner vi ut av logistikken',
         },
         {
           time:  'Hele kvelden',
           label: '🍔 Hamburger fra grillen',
-          note:  'Selvlagde burgere fra grillen serveres løpende hele kvelden. Ingen fast middagstid — mat er klart når du ankommer.',
+          note:  'Selvkomponerte burgere fra grillen serveres løpende hele kvelden. Ingen fast middagstid — mat er klart når du ankommer.',
         },
         {
-          time:  'Utover kvelden',
+          time:  'Fra klokken 20:55',
           label: '⚽ Norge vs. Frankrike på prosjektor',
-          note:  'VM-åpningskampen vises utendørs på prosjektor. Ta med noe godt å sitte i og stem stemmen.',
+          note:  'VM-åpningskampen vises utendørs på prosjektor. Det blir anledning til å gjøre andre ting mens kampen foregår',
         },
       ],
     },
@@ -210,8 +225,8 @@ export const PROGRAM = {
       events: [
         {
           time:  '09:00',
-          label: '🍳 Frokost p[ hytta',
-          note:  'Jobber litt med logistikken, men vi finner en måte å transportere de som sover i byen',
+          label: '🍳 Frokost på hytta',
+          note:  'Jobber litt med logistikken, men vi finner en måte å transportere inn de som sover i byen',
         },
         {
           time:  'Ca. 11:00',
@@ -235,18 +250,13 @@ export const PROGRAM = {
       events: [
         {
           time:  'Formiddagen',
-          label: '🚶 Omvisning i Farsund by',
-          note:  'For de som har lyst — en liten guidet spasertur i Farsund sentrum. Ingen tvang, men anbefales.',
+          label: '🚶 Åpent program',
+          note:  'Ta en tur i Farsund sentrum, spis frokost på hytta, ta et bad.',
         },
         {
           time:  'Hele dagen',
-          label: 'Hytten er åpen',
+          label: 'hytta er åpen',
           note:  'Dra når du vil, bli så lenge du vil. Ingen fasit på søndagen — gjør akkurat som du selv ønsker.',
-        },
-        {
-          time:  'Etterpå',
-          label: 'Savne alle umiddelbart',
-          note:  '',
         },
       ],
     },
@@ -256,7 +266,7 @@ export const PROGRAM = {
 // --- Vær ---
 export const WEATHER = {
   title:      'Været i Farsund',
-  subtitle:   'Hva sier værgudene? Her er oppdatert varsel fra Yr — direkte fra',
+  subtitle:   'Her er oppdatert varsel fra Yr — direkte fra',
   yrLinkText: 'yr.no',
   fullForecastBtn: 'Se full 10-dagers varsel på Yr.no →',
   credit:     'Værdata levert av',
@@ -264,6 +274,15 @@ export const WEATHER = {
   creditSuffix: '/ Meteorologisk institutt',
   dropdownTitle: 'Farsund — 5 dager',
   meteogramLink: 'Se meteogram ↓',
+}
+
+// --- Discord ---
+export const DISCORD = {
+  inviteUrl: 'https://discord.gg/SZ7qBrVXdz',
+  label:     'Discord',
+  navLabel:  'Chat 💬',
+  footerLabel: 'Bli med i Discord-chatten vår',
+  footerBtn:   'Åpne Discord →',
 }
 
 // --- Footer ---

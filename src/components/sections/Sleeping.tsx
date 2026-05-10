@@ -1,5 +1,5 @@
 import { useState, useRef } from 'react'
-import { Container, Row, Col, Card, Alert, Form, InputGroup } from 'react-bootstrap'
+import { Container, Row, Col, Card, Form, InputGroup } from 'react-bootstrap'
 import { SLEEPING } from '../../content'
 
 const locations = SLEEPING.locations
@@ -59,11 +59,6 @@ export default function Sleeping() {
               autoComplete="off"
             />
           </InputGroup>
-          {query.length >= 2 && matchIndex >= 0 && (
-            <div className="mt-2 px-3 py-2 rounded-3 text-center fw-semibold alert alert-success mb-0">
-              {SLEEPING.searchHit(matchedGuest!, locations[matchIndex].name, locations[matchIndex].icon)}
-            </div>
-          )}
           {query.length >= 2 && matchIndex < 0 && (
             <div className="mt-2 px-3 py-2 rounded-3 text-center alert alert-secondary mb-0">
               {SLEEPING.searchMiss}
@@ -82,6 +77,11 @@ export default function Sleeping() {
                     style={isMatch ? { outline: '3px solid #198754', outlineOffset: 2 } : {}}
                   >
                     <Card.Body className="p-4">
+                      {isMatch && (
+                        <div className="alert alert-success py-2 px-3 mb-3 fw-semibold small text-center">
+                          {SLEEPING.searchHit(matchedGuest!, name, icon)}
+                        </div>
+                      )}
                       <div className="d-flex align-items-center gap-2 mb-1">
                         <span style={{ fontSize: '1.6rem' }}>{icon}</span>
                         <Card.Title className="fw-bold mb-0">{name}</Card.Title>
@@ -118,14 +118,6 @@ export default function Sleeping() {
           })}
         </Row>
 
-        <Alert variant="warning" className="mt-5">
-          <Alert.Heading className="fs-6 fw-bold">{SLEEPING.packTitle}</Alert.Heading>
-          <ul className="mb-0">
-            {SLEEPING.packItems.map((item, i) => (
-              <li key={i} dangerouslySetInnerHTML={{ __html: item }} />
-            ))}
-          </ul>
-        </Alert>
       </Container>
     </section>
   )

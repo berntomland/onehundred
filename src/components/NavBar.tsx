@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { Navbar, Nav, Container } from 'react-bootstrap'
-import { NAV_SECTIONS, SITE_TITLE } from '../content'
+import { NAV_SECTIONS, SITE_TITLE, DISCORD } from '../content'
 
 export default function NavBar() {
   const [expanded, setExpanded] = useState(false)
@@ -36,6 +36,15 @@ export default function NavBar() {
               </Nav.Link>
             ))}
           </Nav>
+          <Nav.Link
+            href={DISCORD.inviteUrl}
+            target="_blank"
+            rel="noreferrer"
+            className="px-3 py-1 rounded-pill fw-semibold ms-2"
+            style={{ background: '#5865F2', color: '#fff', fontSize: '0.9rem' }}
+          >
+            {DISCORD.navLabel}
+          </Nav.Link>
         </Navbar.Collapse>
       </Container>
     </Navbar>
