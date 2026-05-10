@@ -24,8 +24,8 @@ export const NAV_SECTIONS = [
 // --- Hero ---
 export const HERO = {
   eyebrow:    '',
-  title:      'Velkommen til ' + SITE_TITLE,
-  lead:       'En hel helg på hytta i Farsund — 50+ av de beste menneskene vi kjenner',
+  title:      'Velkommen til fest i skjærgården!',
+  lead:       'En helg på hytta i Farsund med 50+ av de beste menneskene vi kjenner',
   dateLabel:  '📅 Dato',
   placeLabel: '📍 Sted',
   guestLabel: '👥 Gjester',
@@ -37,16 +37,16 @@ export const HERO = {
 // --- Om helgen ---
 export const ABOUT = {
   title: 'Om helgen',
-  body:  'Vi gleder oss veldig til å feire med dere alle sammen! \n' +
+  body:  'Vi gleder oss stort til å feire med dere alle sammen! \n' +
       '\n' +
-      'Det er laget et lite program for helgen, men vi legger opp til et lavt tempo med muligheter til å sole seg, bade, drikke vin i skyggen og prate. Kanskje drar noen i gang noen hageleker?\n' +
-      'Eller satser vi alt på at får sånn noenlunde vær. Mesteparten av festen vil skje ute. Ta med gode klær!\n' +
+      'Vi har laget et program for helgen, men vi legger opp til lavt tempo med muligheter for soling, bading, fisking, noe leskende i skyggen og god prat. ' +
+      'Vi satser selvsagt på strålende sol siden mesteparten av festen vil skje ute, men vi har en plan B dersom værgudene slår seg vrange\n' +
       '\n' +
-      'Frokost, middag og kvelds ordnes av oss. Litt drikke til maten ordner vi også, men ta gjerne med deg det du har lyst til å drikke utover dette. \n' +
+      'Vi står for mat (noe krever litt egeninnsats). Vi står for drikke til maten, men ta gjerne med deg det du har lyst til å drikke utover dette. \n' +
       '\n' +
-      'Presangen er at dere kommer  🙂',
-  planLabel: 'Det lille programmet vi har vil bli håndtert av Bernts 3 søstre:',
-  planners:  'Lilly Ann (93281027), Hildegunn (99558833) og Linda (41929313)',
+      'Vi har bare ett gaveønske og det er at det blir en bra fest 🙂',
+  planLabel: 'Lilly Ann (93281027) i samarbeid med Hildegunn og Linda styrer programmet',
+  planners:  '',
 }
 
 // --- Velkommen ---
@@ -64,19 +64,19 @@ export const GETTING_THERE = {
   coordinates:    '58.0922° N, 6.8338° Ø',
   directionsBtn:  'Veibeskrivelse fra Bergen →',
   byCarTitle:     'Med bil',
-  byCar:          'Fra Bergen tar turen 6.5 til 7 timer. Litt avhengig av trafikk og om du treffer på ferja. Google maps er din venn',
+  byCar:          'Fra Bergen tar turen 6.5 til 7 timer, litt avhengig av trafikk og om du treffer på ferjen(e). Google maps er din venn.',
   noCarTitle:     'Uten bil',
-  noCar:          'Bruk gjerne facebooksiden til å koordinere alternativ transport',
-  mapCaption:     'Klikk på markøren for Google Maps',
+  noCar:          'Bruk gjerne Discord til å koordinere felles transport. Vi vet allerede om noen som kommer med fly til Kjevik',
+  mapCaption:     'Klikk på markøren for Google Maps navigering',
 }
 
 // --- Parkering ---
 export const PARKING = {
   title:    'Parkering',
-  subtitle: 'Det er lite parkering i nærheten av ved hytta — biler parkeres i Farsund by, og man tar seg frem til hytta derfra.',
+  subtitle: 'Det er lite parkering i nærheten av hytta. Biler parkeres i Farsund by, og så ordner vi transport derfra ut til hytta',
   tipTitle: '🚗 Tips:',
-  tip1:     'Det er mulig å kjøre nesten frem til hytta, slippe av folk og bagasje, og deretter kjøre tilbake til Farsund for å parkere. Det er bare 5 minutters gange fra parkeringsplassen til hytta',
-  tip2:     'Transport mellom Farsund og hytta blir mest sannsynlig med båt — mer info om dette kommer',
+  tip1:     'Det er mulig å kjøre nesten frem til hytta, slippe av folk og bagasje, og deretter kjøre tilbake til Farsund for å parkere. Det er 5 minutters gange fra parkeringsplassen til hytta',
+  tip2:     'Transport mellom Farsund og hytta blir mest sannsynlig med båt. Mer info om dette kommer',
   mapsLabel: '📍 Vis i Google Maps →',
   options: [
     {
@@ -96,7 +96,7 @@ export const PARKING = {
       details: [
         { label: 'Kapasitet',  value: '8–10 biler' },
         { label: 'Varighet',   value: 'Hele helgen' },
-        { label: 'Elbillader', value: 'Ikke bekreftet' },
+        { label: 'Elbillader', value: 'Nei' },
       ],
       note:   'Praktisk for de som overnatter i eneboligen',
       mapUrl: 'https://maps.app.goo.gl/GuCLargTyf5LDrSg7',
@@ -107,12 +107,12 @@ export const PARKING = {
 // --- Overnatting ---
 export const SLEEPING = {
   title:    'Overnatting',
-  subtitle: 'Vi har plass til alle — fordelt på fem lokasjoner.',
+  subtitle: 'Vi har plass til alle! Dere blir fordelt på fem lokasjoner.',
   searchTitle:       'Finn din soveplass',
   searchPlaceholder: 'Skriv inn navnet ditt...',
   searchHit:         (name: string, location: string, icon: string) =>
                        `${name} sover i ${location} ${icon}`,
-  searchMiss:        'Fant ikke noen med dette navnet, har du glemt å melde deg?',
+  searchMiss:        'Fant ikke noen med dette navnet, har du glemt å melde deg på!?',
   mapsLabel:         '📍 Vis i Google Maps →',
   locations: [
     {
@@ -121,7 +121,7 @@ export const SLEEPING = {
       capacity: 'ca. 10–11 personer',
       mapUrl: 'https://maps.app.goo.gl/dycKm6uXgmJn7Sx78',
       spots: [
-        { label: 'Hems',     count: '6 plasser (litt trangt, men hyggelig)' },
+        { label: 'Hems',     count: '6 plasser (litt trangt, men veldig hyggelig)' },
         { label: 'Soverom',  count: '2–3 plasser' },
         { label: 'Stuegulv', count: '2 på madrass' },
       ],
@@ -136,7 +136,7 @@ export const SLEEPING = {
       spots: [
         { label: 'Sengeplasser', count: '8 stk' },
       ],
-      note: 'Hovedoppholdsstedet for hele gjengen — ingen gulvsovere her.',
+      note: 'Hovedoppholdsstedet for hele gjengen. Det blir ingen gulvsovere her.',
       guests: ['Alma', 'Oline', 'Bernt', 'Vibeke', 'Svein Erik', 'Anne Marie'],
     },
     {
@@ -169,9 +169,8 @@ export const SLEEPING = {
       capacity: '15–20+ personer',
       mapUrl: 'https://maps.app.goo.gl/GuCLargTyf5LDrSg7',
       spots: [
-        { label: 'Sengeplasser',     count: '15 stk' },
-        { label: 'Med luftmadrasser', count: 'Enkelt å utvide til 20+' },
-        { label: 'Anneks ved sjøen', count: '3 av plassene ligger her' },
+        { label: 'Sengeplasser',     count: '12 stk (flere med luftmadrasser)' },
+        { label: 'Anneks ved sjøen', count: '3 stk (flere med luftmadrasser' },
       ],
       note: 'Ligger i Farsund by. De som sover her blir plukket opp til båtturen lørdag morgen.',
       guests: ['Hildegunn', 'Lilly Ann', 'Linda', 'Tom-Ivar', 'Stig', 'Tor Erik', 'Christine', 'Lennart', 'Synnøve', 'Toli', 'Ronny', 'Thomas', 'Øystein', 'Kjersti', 'Lovise'],
@@ -184,14 +183,15 @@ export const PACK = {
   title: 'Husk å ta med',
   mustHaveTitle: '✅ Må ha med',
   mustHaveItems: [
-    'Laken + sovepose <strong>eller</strong> dyne — vi har noen dyner, men langt fra nok til alle',
-    'Vi er avhengige av at noen tar med <strong>luftmadrasser</strong> — mer info om dette kommer',
+    'Laken + sovepose <strong>eller</strong> dyne. Vi har noen dyner, men langt fra nok til alle',
+    'Vi er avhengige av at noen tar med <strong>luftmadrasser</strong>. Mer info om dette kommer',
   ],
   niceToHaveTitle: '👍 Greit å ta med',
   niceToHaveItems: [
     'Badetøy og håndkle',
-    'Solkrem',
-    'Regntøy og varme klær til kveldene',
+    'Solkrem og solbriller',
+    'Varme klær til kveldene',
+    'Regntøy (kanskje, sjekk værmeldingen her på siden)',
     'Egne drikkevarer utover det vi tilbyr',
   ],
 }
@@ -206,17 +206,17 @@ export const PROGRAM = {
         {
           time:  'Ettermiddag',
           label: 'Ankomst',
-          note:  'Kom når du kan. hytta er klar fra ettermiddagen. Gi en lyd når du vet omtrent når du kommer så finner vi ut av logistikken',
+          note:  'Kom når du kan. Gi en lyd når du vet omtrent ankomstid, så finner vi ut av logistikken.',
         },
         {
           time:  'Hele kvelden',
           label: '🍔 Hamburger fra grillen',
-          note:  'Selvkomponerte burgere fra grillen serveres løpende hele kvelden. Ingen fast middagstid — mat er klart når du ankommer.',
+          note:  'Selvkomponerte burgere fra grillen serveres løpende hele kvelden. Det blir mingling og kos.',
         },
         {
           time:  'Fra klokken 20:55',
           label: '⚽ Norge vs. Frankrike på prosjektor',
-          note:  'VM-åpningskampen vises utendørs på prosjektor. Det blir anledning til å gjøre andre ting mens kampen foregår',
+          note:  'VM-åpningskampen vises utendørs på prosjektor for de som ønsker det.',
         },
       ],
     },
@@ -226,22 +226,22 @@ export const PROGRAM = {
         {
           time:  '09:00',
           label: '🍳 Frokost på hytta',
-          note:  'Jobber litt med logistikken, men vi finner en måte å transportere inn de som sover i byen',
+          note:  'De som bor i byen må pakke med seg klær for hele dagen.',
         },
         {
           time:  'Ca. 11:00',
           label: '⚓ Båttur',
-          note:  'Vi drar ut på sjøen i ca. 4 timer. Det blir enkel servering og drikke underveis, og det blir mulighet for å bade. Ta med badetøy og håndkle — vanntemperaturen er et sted mellom 10 og 20 grader, og det er opp til deg hva du synes om det.',
+          note:  'Vi drar ut i Farsunds vakre skjærgård på en liten rundtur. Været avgjør hvor langt og hvor lenge. Det blir enkel servering og drikke underveis.. Ta med badetøy, håndkle og klær etter været.',
         },
         {
           time:  'Ca: 16:00',
           label: 'Tilbake på hytta',
-          note:  'Etter båtturen er det bare å slappe av, tørke seg, og lade opp til kvelden.',
+          note:  'Avslapning og kos.',
         },
         {
           time:  'Kvelden',
-          label: '🍽️ Middag, underholdning og god stemning',
-          note:  'Det blir skalldyr og litt tapas. Utpå natten dukker det opp litt nattmat.',
+          label: '🍽️ Middag, underholdning og fest',
+          note:  'Sørlandsmeny med ræger og krabber. Litt tapas blir det også. Nattmat serveres når det mørkner.',
         },
       ],
     },
@@ -249,14 +249,19 @@ export const PROGRAM = {
       day: 'Søndag 28. juni',
       events: [
         {
-          time:  'Formiddagen',
+          time:  'Sen frokost på hytta for de som vil',
           label: '🚶 Åpent program',
-          note:  'Ta en tur i Farsund sentrum, spis frokost på hytta, ta et bad.',
+          note:  '',
+        },
+        {
+          time:  '+/- 13:00',
+          label: '🚶 Åpent program',
+          note:  'Guidet tur i Farsund sentrum for de som har lyst til det.',
         },
         {
           time:  'Hele dagen',
-          label: 'hytta er åpen',
-          note:  'Dra når du vil, bli så lenge du vil. Ingen fasit på søndagen — gjør akkurat som du selv ønsker.',
+          label: '',
+          note:  'Dra når du vil, bli så lenge du vil. Ingen fasit på søndagen. Gjør akkurat som du selv ønsker.',
         },
       ],
     },
@@ -288,5 +293,5 @@ export const DISCORD = {
 // --- Footer ---
 export const FOOTER = {
   tagline:  `${SITE_TITLE} — vi gleder oss!`,
-  contact:  'Spørsmål, innspill eller bare vil si at du gleder deg? Send melding til arrangørene.',
+  contact:  'Spørsmål, innspill eller bare vil si at du gleder deg? Send melding til Vibeke eller Bernt.',
 }
