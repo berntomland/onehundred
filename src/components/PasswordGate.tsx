@@ -36,7 +36,6 @@ export default function PasswordGate({ children }: { children: React.ReactNode }
           <Card.Body className="p-5 text-center">
             <div style={{ fontSize: '3rem' }} className="mb-3">🏖️</div>
             <h4 className="fw-bold mb-1">{SITE_TITLE}</h4>
-            <p className="text-muted small mb-4">Kun for inviterte gjester</p>
             <Form onSubmit={handleSubmit}>
               <Form.Group className="mb-3">
                 <Form.Control
@@ -52,7 +51,7 @@ export default function PasswordGate({ children }: { children: React.ReactNode }
                 </Form.Control.Feedback>
               </Form.Group>
               <Button type="submit" variant="primary" className="w-100">
-                Kom inn 🎉
+                Enter
               </Button>
             </Form>
           </Card.Body>
