@@ -8,27 +8,43 @@ function normalize(s: string) {
   return s.toLowerCase().trim()
 }
 
+function matchScore(guest: string, q: string): number {
+  const g = normalize(guest)
+  if (g === q) return 0
+  const words = g.split(/\s+/)
+  if (words[0] === q) return 1
+  if (words.some(w => w === q)) return 2
+  if (words.some(w => w.startsWith(q))) return 3
+  if (g.includes(q)) return 4
+  return Infinity
+}
+
+function findMatchIndex(q: string): number {
+  if (q.length < 2) return -1
+  let bestScore = Infinity
+  let bestIdx = -1
+  locations.forEach((loc, idx) => {
+    const score = Math.min(...loc.guests.map(g => matchScore(g, q)))
+    if (score < bestScore) { bestScore = score; bestIdx = idx }
+  })
+  return bestIdx
+}
+
 export default function Sleeping() {
   const [query, setQuery] = useState('')
   const cardRefs = useRef<(HTMLDivElement | null)[]>([])
 
   const q = normalize(query)
-  const matchIndex = q.length >= 2
-    ? locations.findIndex(loc =>
-        loc.guests.some(g => normalize(g).includes(q))
-      )
-    : -1
+  const matchIndex = findMatchIndex(q)
   const matchedGuest = matchIndex >= 0
-    ? locations[matchIndex].guests.find(g => normalize(g).includes(q))
+    ? locations[matchIndex].guests.reduce((best, g) =>
+        matchScore(g, q) < matchScore(best, q) ? g : best
+      )
     : null
 
   function handleSearch(value: string) {
     setQuery(value)
-    const idx = value.trim().length >= 2
-      ? locations.findIndex(loc =>
-          loc.guests.some(g => normalize(g).includes(normalize(value)))
-        )
-      : -1
+    const idx = findMatchIndex(normalize(value))
     if (idx >= 0) {
       setTimeout(() => {
         cardRefs.current[idx]?.scrollIntoView({ behavior: 'smooth', block: 'center' })
