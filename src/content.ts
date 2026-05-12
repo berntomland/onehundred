@@ -127,7 +127,7 @@ export const SLEEPING = {
         { label: 'Stuegulv', count: '2 på madrass' },
       ],
       note: null as string | null,
-      guests: ['Åse', 'Mike', 'Siren', 'Jørgen', 'Kari Nordstoga'],
+      guests: ['Jørgen', 'Bettina', 'Kjell Arne', 'Ingrid Miljeteig', 'Håvard', 'Ingrid Enge', 'Liv Karin', 'Kari Walle', 'Beate', 'Agnes', 'Jon'],
     },
     {
       icon: '🏡',
@@ -139,7 +139,7 @@ export const SLEEPING = {
         { label: 'Sengeplasser', count: '8 stk' },
       ],
       note: 'Hovedoppholdsstedet for hele gjengen — ingen gulvsovere her.',
-      guests: ['Alma', 'Oline', 'Njål', 'Ingrid Enge', 'Beate', 'Svein Erik'],
+      guests: ['Alma', 'Oline', 'Kari Nordstoga', 'Svein Erik', 'Anne Marie', 'Vibeke', 'Bernt'],
     },
     {
       icon: '🛖',
@@ -153,7 +153,7 @@ export const SLEEPING = {
         { label: 'Vinterhage',   count: '2 på madrass' },
       ],
       note: null as string | null,
-      guests: ['Torunn', 'Synnøve', 'Liv', 'Ni', 'Bettina', 'Kjell', 'Arne', 'Ingrid Miljeteig', 'Håvard', 'Øyvind', 'Kari Walle'],
+      guests: ['Trude', 'Einar', 'Kirsti', 'Ståle', 'Annabelle', 'Christian', 'Frode', 'Siri', 'Erik', 'Anette', 'Heidi', 'Gaute', 'Anders', 'Hilde'],
     },
     {
       icon: '⚓',
@@ -179,7 +179,7 @@ export const SLEEPING = {
         { label: 'Anneks ved sjøen',  count: '3 av plassene ligger her' },
       ],
       note: 'Ligger i Farsund by. De som sover her blir plukket opp til båtturen lørdag morgen.',
-      guests: ['Kjersti Power', 'Øystein Power', 'Geir', 'Ragnhild Nordenborg', 'Tor Erik', 'Einar', 'Knut', 'Kirsti', 'Ståle', 'Agnes', 'Jon', 'Annabelle', 'Christian', 'Frode', 'Kåre', 'Hildegunn', 'Linda'],
+      guests: ['Kjersti Power', 'Øystein Power', 'Geir', 'Ragnhild Nordenborg', 'Tor Erik', 'Christine', 'Lennart', 'Torunn', 'Synnøve', 'Toli', 'Ragnhild Muriaas', 'Lovise', 'Hildegunn', 'Ronny', 'Linda', 'Stig', 'Lilly Ann', 'Tom-Ivar', 'Lea', 'Benjamin'],
     },
   ],
 }
