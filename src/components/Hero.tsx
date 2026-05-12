@@ -132,7 +132,17 @@ export default function Hero() {
           <Col xs={12} md={7} className="text-center text-md-start">
             <h1
               className="display-2 fw-bold mb-3"
-              style={{ textShadow: '0 2px 24px rgba(0,0,0,0.6)' }}
+              style={{
+                color: '#f0f8ff',
+                letterSpacing: '0.04em',
+                textShadow: [
+                  '0 1px 0 rgba(255,255,255,0.25)',
+                  '0 2px 4px rgba(0,0,0,0.5)',
+                  '0 4px 12px rgba(0,0,0,0.4)',
+                  '0 8px 32px rgba(0,0,0,0.35)',
+                  '0 0 60px rgba(255,255,255,0.08)',
+                ].join(', '),
+              }}
             >
               {HERO.title}
             </h1>
