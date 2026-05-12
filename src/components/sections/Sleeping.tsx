@@ -67,8 +67,11 @@ export default function Sleeping() {
         </div>
 
         <Row className="g-4">
-          {locations.map(({ icon, name, capacity, mapUrl, spots, note }, idx) => {
+          {locations.map(({ icon, name, capacity, totalCapacity, mapUrl, spots, note, guests }, idx) => {
             const isMatch = idx === matchIndex
+            const used = guests.length
+            const pct = Math.min(used / totalCapacity, 1)
+            const barColor = used > totalCapacity ? '#dc3545' : used === totalCapacity ? '#fd7e14' : '#198754'
             return (
               <Col key={name} xs={12} md={6} lg={4}>
                 <div ref={el => { cardRefs.current[idx] = el }}>
@@ -86,9 +89,18 @@ export default function Sleeping() {
                         <span style={{ fontSize: '1.6rem' }}>{icon}</span>
                         <Card.Title className="fw-bold mb-0">{name}</Card.Title>
                       </div>
-                      <p className="small fw-semibold mb-3 text-muted">
+                      <p className="small fw-semibold mb-2 text-muted">
                         {capacity}
                       </p>
+                      <div className="mb-3">
+                        <div className="d-flex justify-content-between small mb-1">
+                          <span className="text-muted">Plasser tatt</span>
+                          <span className="fw-bold" style={{ color: barColor }}>{used} / {totalCapacity}</span>
+                        </div>
+                        <div style={{ height: 6, background: 'var(--bs-secondary-bg)', borderRadius: 4, overflow: 'hidden' }}>
+                          <div style={{ width: `${pct * 100}%`, height: '100%', background: barColor, borderRadius: 4, transition: 'width 0.3s' }} />
+                        </div>
+                      </div>
                       <ul className="list-unstyled mb-0">
                         {spots.map(({ label, count }) => (
                           <li key={label} className="d-flex justify-content-between small text-muted border-bottom py-1">
