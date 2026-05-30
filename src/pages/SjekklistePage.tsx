@@ -445,10 +445,6 @@ const kategorier: Kategori[] = [
 
 type State = { checked: Set<string>; notes: Record<string, string> }
 
-function fmtKr(n: number) {
-  return n.toLocaleString('nb-NO') + ' kr'
-}
-
 export default function SjekklistePage() {
   const [state, setState] = useState<State>({ checked: new Set(), notes: {} })
   const [loaded, setLoaded] = useState(false)
@@ -492,9 +488,6 @@ export default function SjekklistePage() {
 
   const totalItems = kategorier.reduce((s, k) => s + k.items.length, 0)
   const totalDone = state.checked.size
-  const totalPris = kategorier.reduce((s, k) =>
-    s + k.items.reduce((ss, i) => ss + (i.pris ?? 0), 0), 0
-  )
 
   if (!loaded) {
     return (
@@ -517,20 +510,17 @@ export default function SjekklistePage() {
         <h1>Sjekkliste — forberedelser</h1>
         <div className="sl-header-meta">
           <span className="sl-progress-overall">{totalDone}/{totalItems}</span>
-          <span className="sl-total-pris">ca. {fmtKr(totalPris)}</span>
         </div>
       </header>
 
       <div className="sl-body">
         {kategorier.map(kat => {
           const done = kat.items.filter(i => state.checked.has(i.id)).length
-          const katPris = kat.items.reduce((s, i) => s + (i.pris ?? 0), 0)
           return (
             <div key={kat.navn} className="sl-kategori">
               <div className="sl-kat-header">
                 <span className="sl-kat-navn">{kat.navn}</span>
                 <div className="sl-kat-meta">
-                  {katPris > 0 && <span className="sl-kat-pris">ca. {fmtKr(katPris)}</span>}
                   <span className="sl-kat-teller">{done}/{kat.items.length}</span>
                 </div>
               </div>
@@ -552,9 +542,6 @@ export default function SjekklistePage() {
                         </label>
                         {item.kontakt && (
                           <span className="sl-kontakt">📞 {item.kontakt}</span>
-                        )}
-                        {item.pris && (
-                          <span className="sl-pris">ca. {fmtKr(item.pris)}</span>
                         )}
                       </div>
                       {item.notat && (
