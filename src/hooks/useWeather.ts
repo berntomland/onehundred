@@ -78,8 +78,8 @@ export function useWeather(): WeatherState {
           if (!byDate[date]) byDate[date] = { temps: [], precip: 0, symbolAt12: '' }
           byDate[date].temps.push(temp)
 
-          // Sum 6-hourly precip (available at 0, 6, 12, 18 UTC)
-          if (entry.data.next_6_hours) {
+          // Only sum non-overlapping 6-hour blocks anchored at 0, 6, 12, 18 UTC
+          if (entry.data.next_6_hours && [0, 6, 12, 18].includes(hour)) {
             byDate[date].precip += entry.data.next_6_hours.details.precipitation_amount ?? 0
             if (hour === 12) {
               byDate[date].symbolAt12 = entry.data.next_6_hours.summary.symbol_code

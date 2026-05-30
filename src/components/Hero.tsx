@@ -2,6 +2,7 @@ import { useState, useRef, useEffect } from 'react'
 import { Container, Row, Col } from 'react-bootstrap'
 import { HERO, EVENT_DATE_DISPLAY, EVENT_LOCATION, EVENT_GUESTS } from '../content'
 import WeatherWidget from './WeatherWidget'
+import NotpronWinners from './NotpronWinners'
 
 const BANNER_IMAGE = '/images/hovedlogo.jpg'
 
@@ -169,7 +170,8 @@ export default function Hero() {
               </div>
             </div>
           </Col>
-          <Col xs={12} md={5} className="d-flex justify-content-center justify-content-md-end">
+          <Col xs={12} md={5} className="d-flex flex-wrap justify-content-center justify-content-md-end gap-3">
+            <NotpronWinners />
             <WeatherWidget />
           </Col>
         </Row>

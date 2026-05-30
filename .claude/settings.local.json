@@ -13,7 +13,26 @@
       "PowerShell(Get-ChildItem \"C:\\\\projects\\\\partypage\\\\public\\\\images\" | Measure-Object -Property Length -Sum | Select-Object @{N='TotalMB';E={[math]::Round\\($_.Sum/1MB,1\\)}})",
       "PowerShell($size = \\(Get-ChildItem \"C:\\\\projects\\\\partypage\\\\public\\\\images\" -Recurse | Measure-Object -Property Length -Sum\\).Sum; Write-Output \"Total: $\\([math]::Round\\($size/1MB,1\\)\\) MB\")",
       "PowerShell(Get-ChildItem \"C:\\\\projects\\\\partypage\\\\public\\\\images\" -Recurse | Sort-Object Length -Descending | Select-Object Name, @{N='MB';E={[math]::Round\\($_.Length/1MB,1\\)}} | Select-Object -First 10)",
-      "PowerShell(Get-ChildItem \"C:\\\\projects\\\\partypage\\\\public\\\\images\" | Sort-Object Length -Descending | ForEach-Object { \"$\\([math]::Round\\($_.Length/1MB,1\\)\\) MB  $\\($_.Name\\)\" } | Select-Object -First 10)"
+      "PowerShell(Get-ChildItem \"C:\\\\projects\\\\partypage\\\\public\\\\images\" | Sort-Object Length -Descending | ForEach-Object { \"$\\([math]::Round\\($_.Length/1MB,1\\)\\) MB  $\\($_.Name\\)\" } | Select-Object -First 10)",
+      "Bash(ssh *)",
+      "Bash(sshpass *)",
+      "Bash(apt-get install *)",
+      "Read(//c/Users/bernt/.ssh/**)",
+      "Bash(ssh-add -l)",
+      "Bash(scp *)",
+      "Bash(nslookup *)",
+      "Bash(git add *)",
+      "Bash(git commit -m ' *)",
+      "Bash(curl -s \"https://discord.com/api/v10/invites/SZ7qBrVXdz\")",
+      "Bash(python3 -c \"import sys,json; d=json.load\\(sys.stdin\\); print\\(d['guild']['id'], d['guild']['name']\\)\")",
+      "Bash(rsync -az --exclude node_modules --exclude dist --exclude .git --exclude 'public/images/*.mp4' -e \"ssh -i ~/.ssh/uaf_deploy\" /p/projects/onehundred/ root@178.105.104.175:/tmp/fest-build/)",
+      "PowerShell(scp -i \"$env:USERPROFILE\\\\.ssh\\\\uaf_deploy\" -r \"P:\\\\projects\\\\onehundred\\\\src\" \"P:\\\\projects\\\\onehundred\\\\public\" \"P:\\\\projects\\\\onehundred\\\\package.json\" \"P:\\\\projects\\\\onehundred\\\\package-lock.json\" \"P:\\\\projects\\\\onehundred\\\\vite.config.ts\" \"P:\\\\projects\\\\onehundred\\\\tsconfig.json\" \"P:\\\\projects\\\\onehundred\\\\tsconfig.app.json\" \"P:\\\\projects\\\\onehundred\\\\tsconfig.node.json\" \"P:\\\\projects\\\\onehundred\\\\index.html\" \"root@178.105.104.175:/tmp/fest-build/\")",
+      "PowerShell(scp -i \"$env:USERPROFILE\\\\.ssh\\\\uaf_deploy\" \"P:\\\\projects\\\\onehundred\\\\.env.local\" \"root@178.105.104.175:/tmp/fest-build/.env.local\")",
+      "PowerShell(scp -i \"$env:USERPROFILE\\\\.ssh\\\\uaf_deploy\" -r \"P:\\\\projects\\\\onehundred\\\\src\" \"P:\\\\projects\\\\onehundred\\\\.env.local\" \"root@178.105.104.175:/tmp/fest-build/\")",
+      "WebFetch(domain:stellar-frangollo-daa6fe.netlify.app)",
+      "Bash(Get-ChildItem \"P:\\\\projects\\\\us\\\\uaf\\\\server\\\\src\\\\main\" -Recurse -Filter \"*.java\")",
+      "Bash(Select-Object -ExpandProperty Name)",
+      "Bash(Sort-Object)"
     ]
   }
 }

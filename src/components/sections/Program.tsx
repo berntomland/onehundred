@@ -32,6 +32,7 @@ export default function Program() {
             </Col>
           ))}
         </Row>
+
       </Container>
     </section>
   )

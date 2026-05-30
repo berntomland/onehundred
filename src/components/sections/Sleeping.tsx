@@ -1,6 +1,7 @@
 import { useState, useRef } from 'react'
 import { Container, Row, Col, Card, Form, InputGroup } from 'react-bootstrap'
 import { SLEEPING } from '../../content'
+import SnakeGame from '../SnakeGame'
 
 const locations = SLEEPING.locations
 
@@ -32,6 +33,7 @@ function findMatchIndex(q: string): number {
 
 export default function Sleeping() {
   const [query, setQuery] = useState('')
+  const [snakeOpen, setSnakeOpen] = useState(false)
   const cardRefs = useRef<(HTMLDivElement | null)[]>([])
 
   const q = normalize(query)
@@ -43,6 +45,11 @@ export default function Sleeping() {
     : null
 
   function handleSearch(value: string) {
+    if (normalize(value) === 'notpron') {
+      setSnakeOpen(true)
+      setQuery('')
+      return
+    }
     setQuery(value)
     const idx = findMatchIndex(normalize(value))
     if (idx >= 0) {
@@ -147,6 +154,7 @@ export default function Sleeping() {
         </Row>
 
       </Container>
+      <SnakeGame open={snakeOpen} onClose={() => setSnakeOpen(false)} />
     </section>
   )
 }

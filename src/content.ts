@@ -153,7 +153,7 @@ export const SLEEPING = {
         { label: 'Vinterhage',   count: '2 på madrass' },
       ],
       note: null as string | null,
-      guests: ['Trude', 'Einar', 'Kirsti', 'Ståle', 'Annabelle', 'Christian', 'Frode', 'Siri', 'Erik', 'Anette', 'Heidi', 'Gaute', 'Anders', 'Hilde'],
+      guests: ['Trude', 'Einar', 'Kirsti', 'Ståle', 'Annabelle', 'Christian', 'Frode', 'Siri', 'Erik', 'Anette', 'Heidi', 'Gaute'],
     },
     {
       icon: '⚓',
@@ -179,7 +179,7 @@ export const SLEEPING = {
         { label: 'Anneks ved sjøen',  count: '3 av plassene ligger her' },
       ],
       note: 'Ligger i Farsund by. De som sover her blir plukket opp til båtturen lørdag morgen.',
-      guests: ['Kjersti Power', 'Øystein Power', 'Geir', 'Ragnhild Nordenborg', 'Tor Erik', 'Christine', 'Lennart', 'Torunn', 'Synnøve', 'Toli', 'Ragnhild Muriaas', 'Lovise', 'Hildegunn', 'Ronny', 'Linda', 'Stig', 'Lilly Ann', 'Tom-Ivar', 'Lea', 'Benjamin'],
+      guests: ['Kjersti Power', 'Øystein Power', 'Geir', 'Ragnhild Nordenborg', 'Tor Erik', 'Christine', 'Lennart', 'Torunn', 'Synnøve', 'Toli', 'Ragnhild Muriaas', 'Lovise', 'Hildegunn', 'Ronny', 'Linda', 'Stig', 'Lilly Ann', 'Tom-Ivar', 'Lea', 'Benjamin', 'Rob'],
     },
   ],
 }
@@ -199,6 +199,7 @@ export const PACK = {
     'Varme klær til kveldene',
     'Muligens regntøy (sjekk værmeldingen her på siden)',
     'Egne drikkevarer utover det vi tilbyr',
+    'Klatresele og klatresko',
   ],
 }
 
@@ -247,7 +248,7 @@ export const PROGRAM = {
         {
           time:  'Kvelden',
           label: '🍽️ Middag, underholdning og fest',
-          note:  'Sørlandsmeny med ræg og krabber. Litt tapas blir det også. Nattmat serveres når det mørkner.',
+          note:  'Skalldyrkveld med reker, krabbe og blåskjell med tilbehør. Nattmat serveres når det mørkner.',
         },
       ],
     },

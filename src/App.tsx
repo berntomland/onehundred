@@ -1,3 +1,4 @@
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import PasswordGate from './components/PasswordGate'
 import NavBar from './components/NavBar'
 import Hero from './components/Hero'
@@ -10,8 +11,11 @@ import Program from './components/sections/Program'
 import Weather from './components/sections/Weather'
 import DiscordSection from './components/sections/DiscordSection'
 import Footer from './components/Footer'
+import ProgramPage from './pages/ProgramPage'
+import SjekklistePage from './pages/SjekklistePage'
+import InnkjopPage from './pages/InnkjopPage'
 
-export default function App() {
+function MainSite() {
   return (
     <PasswordGate>
       <NavBar />
@@ -26,5 +30,30 @@ export default function App() {
       <DiscordSection />
       <Footer />
     </PasswordGate>
+  )
+}
+
+export default function App() {
+  return (
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<MainSite />} />
+        <Route path="/program" element={
+          <PasswordGate>
+            <ProgramPage />
+          </PasswordGate>
+        } />
+        <Route path="/sjekkliste" element={
+          <PasswordGate>
+            <SjekklistePage />
+          </PasswordGate>
+        } />
+        <Route path="/innkjop" element={
+          <PasswordGate>
+            <InnkjopPage />
+          </PasswordGate>
+        } />
+      </Routes>
+    </BrowserRouter>
   )
 }
