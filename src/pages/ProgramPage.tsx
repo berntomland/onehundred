@@ -5,7 +5,6 @@ type Event = {
   time: string
   title: string
   note?: string
-  ansvarlig?: string
   highlight?: boolean
 }
 
@@ -17,44 +16,17 @@ type Day = {
 
 const program: Day[] = [
   {
-    label: 'Torsdag 25. juni — forberedelser',
-    color: '#888',
-    events: [
-      {
-        time: '',
-        title: 'Lage dressing og tilbehør til skalldyr',
-        note: 'Gjøres dagen før for å spare tid lørdag.',
-      },
-      {
-        time: '',
-        title: 'Sitrus våtservietter / sitrusbad',
-        note: 'Trenger boller til dette. Klargjøres på forhånd.',
-      },
-    ],
-  },
-  {
     label: 'Fredag 26. juni',
     color: '#3b6ea5',
     events: [
       {
-        time: '15:00',
-        title: 'Klargjøring',
-        note: 'Mat og grill klargjøres. Bord og stoler settes opp. Bakervarer hentes. Krabber ankommer fra Rema 1000.',
-      },
-      {
-        time: '16:00',
-        title: 'Båttransport starter',
-        note: 'Gjester fraktes fra Farsund til hytta gjennom kvelden.',
-        ansvarlig: 'Benjamin og Lea',
-      },
-      {
         time: '16:00',
         title: 'Første gjester ankommer',
-        note: 'Alle oppfordres til å komme til hytten — også de som skal sove i byen. Antrekk: rødt, hvitt og blått 🇳🇴',
+        note: 'Alle oppfordres til å komme til hytten — også de som skal sove i byen. Antrekk: Noe som passer til fotballkamp',
       },
       {
         time: '20:00',
-        title: 'Offisiell åpning',
+        title: 'Festen starter',
         note: 'Velkommen og oppjazzing til fotballkampen.',
         highlight: true,
       },
@@ -71,8 +43,8 @@ const program: Day[] = [
       },
       {
         time: 'Når du vil',
-        title: 'Finn din soveplass',
-        note: 'Finn deg til rette når du ønsker.',
+        title: 'Legg deg når du vil',
+        note: 'Oline er sjåfør for de som trenger transport til byen.',
       },
     ],
   },
@@ -81,50 +53,30 @@ const program: Day[] = [
     color: '#2c9e58',
     events: [
       {
-        time: 'Morgen',
-        title: 'Klargjøre søppelstasjoner',
-        note: 'Settes opp før frokost.',
-      },
-      {
         time: '09:00',
         title: 'Frokost',
-        note: 'Sett frem mat, lag kaffe, rydd etterpå. De som sover i byen møter til båtturen.',
-        ansvarlig: 'TBD (2–4 pers)',
+        note: 'Sett frem mat, lag kaffe, rydd etterpå.',
+      },
+      {
+        time: '',
+        title: 'For deg som sover i byen',
+        note: 'Du kan enten komme til hytten for frokost, eller møte direkte på kaia i Farsund til båtturen. Mer informasjon om dette kommer uken før.',
       },
       {
         time: '10:45',
-        title: 'Oppmøte på bryggen',
-        note: 'Alle møter på bryggen. Ha klart ansvar for drikke i hvert båtlag.',
+        title: 'Avgang fra bryggen i Bekkeviga',
+        note: 'De som er på hytta møter på bryggen for å bli plukket opp til båtturen.',
         highlight: true,
       },
       {
         time: '11:00',
         title: 'Avgang — båttur i skjærgården',
         note: '4 båter. Hvert lag har én båtsjef og én drikkeansvarlig. Hvert lag har fått et oppdrag som fremføres på kvelden — dikt, sang, dans, standup eller noe eget. Båtfordeling kunngjøres i forkant.',
-        ansvarlig: 'Båtsjef × 4: TBD',
       },
       {
         time: '14:00–15:00',
         title: 'Tilbake på hytta',
         note: 'Bading, soling, skifte klær, kubb, dart, prat — gjør det du har lyst til.',
-      },
-      {
-        time: '16:00',
-        title: 'Musikk på',
-        note: 'Spilles fra nå og gjennom hele kvelden.',
-        ansvarlig: 'Tor Erik / Thomas / Jørgen',
-      },
-      {
-        time: '16:00',
-        title: 'Dekking og klargjøring til middag',
-        note: 'Pynte bord, sette frem rekvisita og dekke til.',
-        ansvarlig: 'Liv Karin / Ragnhild',
-      },
-      {
-        time: '16:00',
-        title: 'Matforberedelser',
-        note: 'Steke lapper og servere boller. Klargjøre skalldyrmenyen.',
-        ansvarlig: 'Beate / Bettina / Thomas / Christian',
       },
       {
         time: '17:00',
@@ -139,29 +91,30 @@ const program: Day[] = [
       },
       {
         time: 'Etter middag',
-        title: 'Kransekake, konfekt og kaffe',
-        ansvarlig: '2 stk kaffe + kaker, 4 stk rydder',
+        title: 'Drinker i baren',
       },
       {
-        time: '22:00',
+        time: '~21:00',
         title: 'Samling foran annekset',
-        note: 'Bålpannen er tent. Musikk, underholdning og dans.',
+        note: 'Bålpannen er tent. Musikk, underholdning og dans. Det er fortsatt mulighet for å holde taler, underholde, fortelle en vits, synge en sang — eller bare kose seg.',
         highlight: true,
       },
       {
-        time: '22:00',
-        title: 'Jenka og dansing',
-        ansvarlig: 'Kjell Arne',
+        time: '21:15',
+        title: 'Underholdning, dans og mingling',
       },
       {
         time: '23:30',
         title: 'Pølsefest',
-        ansvarlig: '2 stk ansvarlig (TBD)',
       },
       {
         time: '~01:00',
-        title: 'Bading?',
-        note: 'For de spreke.',
+        title: 'Nattbad?',
+      },
+      {
+        time: 'Utover natten',
+        title: 'Transport tilbake til byen',
+        note: 'Transport går puljevis, enten med båt eller maxitaxi. Detaljer kommer uken før.',
       },
     ],
   },
@@ -173,7 +126,6 @@ const program: Day[] = [
         time: '11:00',
         title: 'Frokost',
         note: 'For de som ønsker. Sen start — ingen hastverk.',
-        ansvarlig: 'Håvard / Kari',
       },
       {
         time: '13:00',
@@ -211,9 +163,6 @@ export default function ProgramPage() {
                     {ev.title}
                   </div>
                   {ev.note && <div className="pp-note">{ev.note}</div>}
-                  {ev.ansvarlig && (
-                    <span className="pp-ansvarlig">Ansvarlig: {ev.ansvarlig}</span>
-                  )}
                 </div>
               </div>
             ))}

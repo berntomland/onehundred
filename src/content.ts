@@ -45,7 +45,7 @@ export const ABOUT = {
       'Vi står for mat (noe krever litt egeninnsats) og drikke til maten, men ta gjerne med deg det du har lyst til å drikke utover dette. \n' +
       '\n' +
       'Vi har bare ett gaveønske og det er at det blir en bra fest 🙂',
-  planLabel: 'Lilly Ann (93281027) i samarbeid med Hildegunn og Linda styrer programmet',
+  planLabel: 'Toastmastere for helgen: Lilly Ann (93281027), Hildegunn og Linda',
   planners:  '',
 }
 
@@ -127,7 +127,7 @@ export const SLEEPING = {
         { label: 'Stuegulv', count: '2 på madrass' },
       ],
       note: null as string | null,
-      guests: ['Jørgen', 'Bettina', 'Kjell Arne', 'Ingrid Miljeteig', 'Håvard', 'Ingrid Enge', 'Liv Karin', 'Kari Walle', 'Beate', 'Agnes', 'Jon'],
+      guests: ['Jørgen Nordahl', 'Bettina Bødtker', 'Kjell Arne Johannsson', 'Ingrid Miljeteig', 'Håvard Enge', 'Ingrid Drange', 'Liv Karin Thommasen', 'Kari Walle', 'Beate Bernes', 'Agnes Tvinnereim', 'Jon Tvinnereim'],
     },
     {
       icon: '🏡',
@@ -139,7 +139,7 @@ export const SLEEPING = {
         { label: 'Sengeplasser', count: '8 stk' },
       ],
       note: 'Hovedoppholdsstedet for hele gjengen — ingen gulvsovere her.',
-      guests: ['Alma', 'Oline', 'Kari Nordstoga', 'Svein Erik', 'Anne Marie', 'Vibeke', 'Bernt'],
+      guests: ['Alma Wang', 'Oline Wang', 'Kari Nordstoga', 'Svein Erik Wang', 'Anne Marie Kaldestad', 'Vibeke Wang', 'Bernt Omland'],
     },
     {
       icon: '🛖',
@@ -153,7 +153,7 @@ export const SLEEPING = {
         { label: 'Vinterhage',   count: '2 på madrass' },
       ],
       note: null as string | null,
-      guests: ['Trude', 'Einar', 'Kirsti', 'Ståle', 'Annabelle', 'Christian', 'Frode', 'Siri', 'Erik', 'Anette', 'Heidi', 'Gaute'],
+      guests: ['Trude Grini', 'Einar Fjelldal', 'Kirsti Teigen', 'Ståle Teigen', 'Annabel Ohldieck', 'Christian Ohldieck', 'Frode Halland', 'Siri Gloppen', 'Erik Reimers', 'Anette Reimers', 'Heidi Westli', 'Gaute Westli'],
     },
     {
       icon: '⚓',
@@ -178,8 +178,8 @@ export const SLEEPING = {
         { label: 'Med luftmadrasser', count: 'Enkelt å utvide til 20+' },
         { label: 'Anneks ved sjøen',  count: '3 av plassene ligger her' },
       ],
-      note: 'Ligger i Farsund by. De som sover her blir plukket opp til båtturen lørdag morgen.',
-      guests: ['Kjersti Power', 'Øystein Power', 'Geir', 'Ragnhild Nordenborg', 'Tor Erik', 'Christine', 'Lennart', 'Torunn', 'Synnøve', 'Toli', 'Ragnhild Muriaas', 'Lovise', 'Hildegunn', 'Ronny', 'Linda', 'Stig', 'Lilly Ann', 'Tom-Ivar', 'Lea', 'Benjamin', 'Rob'],
+      note: 'Ligger i Farsund by. De som sover her blir plukket opp til båtturen lørdag morgen. Lilly Ann er husansvarlig.',
+      guests: ['Kjersti Power', 'Øystein Power', 'Geir Pedersen', 'Ragnhild Nordenborg', 'Tor Erik Gregersen', 'Christine Sandtorv', 'Lennart Frimannslund', 'Torunn Strand', 'Synnøve Misje', 'Toli Espeland', 'Ragnhild Muriaas', 'Lovise Aalen', 'Hildegunn Adde', 'Ronny Adde', 'Linda Lindeberg', 'Stig Lauvsland', 'Lilly Ann Jensen', 'Tom-Ivar Waage Jensen', 'Lea Vollen', 'Benjamin Solli', 'Rob McCann', 'Thomas Caldwell'],
     },
   ],
 }

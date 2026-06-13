@@ -3,7 +3,7 @@ import { readFileSync, writeFileSync, mkdirSync } from 'fs'
 
 const PORT = 3001
 const DATA_DIR = '/var/data'
-const ALLOWED = new Set(['sjekkliste', 'innkjop', 'notpron'])
+const ALLOWED = new Set(['sjekkliste', 'innkjop', 'notpron', 'oppgaver'])
 
 function file(key) { return `${DATA_DIR}/${key}.json` }
 

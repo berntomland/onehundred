@@ -14,6 +14,8 @@ import Footer from './components/Footer'
 import ProgramPage from './pages/ProgramPage'
 import SjekklistePage from './pages/SjekklistePage'
 import InnkjopPage from './pages/InnkjopPage'
+import OppgaverPage from './pages/OppgaverPage'
+import OppgaverAdminPage from './pages/OppgaverAdminPage'
 
 function MainSite() {
   return (
@@ -51,6 +53,16 @@ export default function App() {
         <Route path="/innkjop" element={
           <PasswordGate>
             <InnkjopPage />
+          </PasswordGate>
+        } />
+        <Route path="/oppgaver" element={
+          <PasswordGate>
+            <OppgaverPage />
+          </PasswordGate>
+        } />
+        <Route path="/oppgaver-admin" element={
+          <PasswordGate>
+            <OppgaverAdminPage />
           </PasswordGate>
         } />
       </Routes>

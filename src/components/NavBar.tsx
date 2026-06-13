@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { Navbar, Nav, Container } from 'react-bootstrap'
+import { Link } from 'react-router-dom'
 import { NAV_SECTIONS, SITE_TITLE, DISCORD } from '../content'
 
 export default function NavBar() {
@@ -35,6 +36,14 @@ export default function NavBar() {
                 {label}
               </Nav.Link>
             ))}
+            <Nav.Link
+              as={Link}
+              to="/oppgaver"
+              className="px-3 fw-semibold"
+              onClick={() => setExpanded(false)}
+            >
+              Min oppgave
+            </Nav.Link>
           </Nav>
           <Nav.Link
             href={DISCORD.inviteUrl}
