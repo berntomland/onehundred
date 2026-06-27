@@ -1,6 +1,11 @@
 // ============================================================
 // INNHOLD — endre tekster her, ikke i komponentfilene
 // ============================================================
+import { GUESTS } from './guests'
+
+function guestsAt(location: string): string[] {
+  return GUESTS.filter(g => g.sleeping === location).map(g => g.name)
+}
 
 // --- Generelt ---
 export const SITE_TITLE = 'Fest i skjærgården'
@@ -127,7 +132,7 @@ export const SLEEPING = {
         { label: 'Stuegulv', count: '2 på madrass' },
       ],
       note: null as string | null,
-      guests: ['Jørgen Nordahl', 'Bettina Bødtker', 'Kjell Arne Johannsson', 'Ingrid Miljeteig', 'Håvard Enge', 'Ingrid Drange', 'Liv Karin Thommasen', 'Kari Walle', 'Beate Bernes', 'Agnes Tvinnereim', 'Jon Tvinnereim'],
+      guests: guestsAt('Annekset'),
     },
     {
       icon: '🏡',
@@ -139,7 +144,7 @@ export const SLEEPING = {
         { label: 'Sengeplasser', count: '8 stk' },
       ],
       note: 'Hovedoppholdsstedet for hele gjengen — ingen gulvsovere her.',
-      guests: ['Alma Wang', 'Oline Wang', 'Kari Nordstoga', 'Svein Erik Wang', 'Anne Marie Kaldestad', 'Vibeke Wang', 'Bernt Omland'],
+      guests: guestsAt('Hovedhytta'),
     },
     {
       icon: '🛖',
@@ -153,7 +158,7 @@ export const SLEEPING = {
         { label: 'Vinterhage',   count: '2 på madrass' },
       ],
       note: null as string | null,
-      guests: ['Trude Grini', 'Einar Fjelldal', 'Kirsti Teigen', 'Ståle Teigen', 'Annabel Ohldieck', 'Christian Ohldieck', 'Frode Halland', 'Siri Gloppen', 'Erik Reimers', 'Anette Reimers', 'Heidi Westli', 'Gaute Westli'],
+      guests: guestsAt('Lånehytte'),
     },
     {
       icon: '⚓',
@@ -165,7 +170,7 @@ export const SLEEPING = {
         { label: 'Madrass', count: '2 plasser' },
       ],
       note: 'Meld deg frivillig! Du sover med bølgeskvulp som lydkulisse. Eksklusivt for de som vet å sette pris på det.',
-      guests: [],
+      guests: guestsAt('Båthuset'),
     },
     {
       icon: '🏘️',
@@ -179,7 +184,7 @@ export const SLEEPING = {
         { label: 'Anneks ved sjøen',  count: '3 av plassene ligger her' },
       ],
       note: 'Ligger i Farsund by. De som sover her blir plukket opp til båtturen lørdag morgen. Lilly Ann er husansvarlig.',
-      guests: ['Kjersti Power', 'Øystein Power', 'Geir Pedersen', 'Ragnhild Nordenborg', 'Tor Erik Gregersen', 'Christine Sandtorv', 'Lennart Frimannslund', 'Torunn Strand', 'Synnøve Misje', 'Toli Espeland', 'Ragnhild Muriaas', 'Lovise Aalen', 'Hildegunn Adde', 'Ronny Adde', 'Linda Lindeberg', 'Stig Lauvsland', 'Lilly Ann Jensen', 'Tom-Ivar Waage Jensen', 'Lea Vollen', 'Benjamin Solli', 'Rob McCann', 'Thomas Caldwell'],
+      guests: guestsAt('Enebolig i Farsund'),
     },
   ],
 }
@@ -191,6 +196,10 @@ export const PACK = {
   mustHaveItems: [
     'Laken + sovepose <strong>eller</strong> dyne. Vi har noen dyner, men langt fra nok til alle',
     'Vi er avhengige av at noen tar med <strong>luftmadrasser</strong>. Mer info om dette kommer',
+    'Badehåndkle',
+    'Svømmevest (de som har)',
+    'Kjølebag (de som har og har plass i bilen)',
+    'Solkrem',
   ],
   niceToHaveTitle: '👍 Greit å ta med',
   niceToHaveItems: [
@@ -256,8 +265,8 @@ export const PROGRAM = {
       day: 'Søndag 28. juni',
       events: [
         {
-          time:  'Sen frokost på hytta for de som vil',
-          label: '🚶 Åpent program',
+          time:  '10:30',
+          label: '🍳 Frokost på hytta',
           note:  '',
         },
         {

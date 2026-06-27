@@ -193,6 +193,42 @@ const kategorier: Kategori[] = [
         oppgave: 'Søppelposer — store pakker',
         notat: '50 pers over en helg. Ta med dobbelt så mange som du tror.',
       },
+      {
+        id: 'inn-loff-grovbrod',
+        oppgave: '6 loff og 6 grovbrød',
+      },
+      {
+        id: 'inn-hamburgerost',
+        oppgave: 'Ost til hamburger',
+      },
+      {
+        id: 'inn-kaffe-ekstra',
+        oppgave: 'Kaffe — 3 poser til',
+      },
+      {
+        id: 'inn-hjertesalat',
+        oppgave: 'Hjertesalat',
+      },
+      {
+        id: 'inn-sitron',
+        oppgave: 'Sitroner — 10 stk',
+      },
+      {
+        id: 'inn-majones-ekstra',
+        oppgave: 'Ekstra majones — 2 stk',
+      },
+      {
+        id: 'inn-varlok',
+        oppgave: 'Vårløk',
+      },
+      {
+        id: 'inn-smor',
+        oppgave: 'Smør — 3 pakker',
+      },
+      {
+        id: 'inn-appelsinjuice',
+        oppgave: 'Appelsinjuice — 4 liter',
+      },
     ],
   },
   {

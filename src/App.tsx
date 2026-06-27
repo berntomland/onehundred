@@ -16,6 +16,7 @@ import SjekklistePage from './pages/SjekklistePage'
 import InnkjopPage from './pages/InnkjopPage'
 import OppgaverPage from './pages/OppgaverPage'
 import OppgaverAdminPage from './pages/OppgaverAdminPage'
+import TurPage from './pages/TurPage'
 
 function MainSite() {
   return (
@@ -63,6 +64,11 @@ export default function App() {
         <Route path="/oppgaver-admin" element={
           <PasswordGate>
             <OppgaverAdminPage />
+          </PasswordGate>
+        } />
+        <Route path="/tur" element={
+          <PasswordGate>
+            <TurPage />
           </PasswordGate>
         } />
       </Routes>

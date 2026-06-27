@@ -75,7 +75,20 @@ function taskKey(t: Task) {
   return `${t.title}|${t.day}|${t.from}|${t.to}`
 }
 
+const TASK_EXTRA_INFO: Record<string, string[]> = {
+  'Klargjøre middag (skalldyrkveld)': [
+    'Lage wasabimajones',
+    'Finhakke vårløk',
+  ],
+}
+
 const TASK_VISUALS: Record<string, { img: string | string[]; emoji: string }> = {
+  'Fotostand — finne plass, klargjøre og informere gjester':
+    { img: 'https://images.unsplash.com/photo-1452587925148-ce544e77e70d?w=600&h=340&fit=crop&auto=format', emoji: '📸' },
+  'Nattmat — pølser':
+    { img: 'https://images.unsplash.com/photo-1619740455993-9d701c1eb6e1?w=600&h=340&fit=crop&auto=format', emoji: '🌭' },
+  'Rydde etter frokost':
+    { img: 'https://plus.unsplash.com/premium_photo-1677234147986-1e9f099e4cb8?w=600&h=340&fit=crop&auto=format', emoji: '🧹' },
   'Toastmaster':
     { img: 'https://images.unsplash.com/photo-1521457099099-f79e0cca6b64?w=600&h=340&fit=crop&auto=format', emoji: '🎤' },
   'Husansvarlig i Farsund':
@@ -373,6 +386,16 @@ export default function OppgaverPage() {
                       </div>
                       {task.note && (
                         <div className="small mt-1 text-muted fst-italic">{task.note}</div>
+                      )}
+                      {TASK_EXTRA_INFO[task.title] && (
+                        <div className="small mt-2">
+                          <div className="fw-semibold">Dette innebærer:</div>
+                          <ul className="mb-0 ps-3 mt-1">
+                            {TASK_EXTRA_INFO[task.title].map((info, j) => (
+                              <li key={j}>{info}</li>
+                            ))}
+                          </ul>
+                        </div>
                       )}
                       {colleagues.length > 0 && task.title !== 'Skape god stemning' && (
                         <div className="small mt-1 text-muted">
