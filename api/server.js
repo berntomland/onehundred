@@ -35,10 +35,10 @@ const server = createServer((req, res) => {
   if (!key || !ALLOWED.has(key)) { res.writeHead(404); res.end('{}'); return }
 
   if (key === 'tur') {
-    const CAPACITY = { 1: 12, 2: 17, 3: 10, 4: 8 }
+    const CAPACITY = { 1: 15, 2: 13, 3: 9, 4: 8 }
     const PRE_ASSIGNED = {
-      'bettina': 1, 'bernt': 1, 'vibeke': 1,
-      'kjell arne': 2, 'oline': 2, 'alma': 2, 'lea': 2,
+      'bettina': 1, 'bernt': 1, 'vibeke': 1, 'jørgen': 1, 'lennart': 1, 'torunn': 1,
+      'kjell arne': 2, 'oline': 2, 'alma': 2, 'lea': 2, 'ingrid miljeteig': 2,
       'hildegunn': 3, 'ronny': 3,
       'stig': 4, 'linda': 4,
     }
