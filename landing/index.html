@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="noindex, nofollow" />
+  <title>beom</title>
+  <style>
+    :root {
+      --bg: #0a0a0b;
+      --fg: #f4f4f5;
+      --muted: #71717a;
+      --accent: #52525b;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html, body { height: 100%; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: var(--bg);
+      color: var(--fg);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 2rem 1.25rem;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* Subtil bakgrunnsgradient så flaten ikke er helt død */
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      background: radial-gradient(circle at 50% 40%, rgba(255, 255, 255, 0.04), transparent 60%);
+      pointer-events: none;
+    }
+
+    .wrap {
+      position: relative;
+      animation: fade 0.9s ease both;
+    }
+
+    .logo {
+      font-size: clamp(3.5rem, 18vw, 9rem);
+      font-weight: 800;
+      letter-spacing: -0.04em;
+      line-height: 1;
+      color: var(--fg);
+    }
+    .logo .dot {
+      color: var(--muted);
+    }
+
+    .tagline {
+      margin-top: 1.5rem;
+      font-size: clamp(0.95rem, 3.5vw, 1.15rem);
+      color: var(--muted);
+      font-weight: 400;
+      letter-spacing: 0.01em;
+    }
+
+    @keyframes fade {
+      from { opacity: 0; transform: translateY(8px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .wrap { animation: none; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="logo">beom<span class="dot">.</span></div>
+    <p class="tagline">Nothing to see here. Get back to work.</p>
+  </div>
+</body>
+</html>
